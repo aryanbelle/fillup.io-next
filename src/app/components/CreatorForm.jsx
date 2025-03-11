@@ -58,7 +58,7 @@ const CreatorForm = (props = defaultFormValues) => {
     if (props.props) {
       setForm({ ...props.props });
     }
-  }, [props.props]);
+  }, []);
 
   const addQuestion = () => {
     setForm({
