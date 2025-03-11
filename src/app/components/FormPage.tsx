@@ -180,7 +180,7 @@ const Form = ({ id }) => {
                   required={question.isRequired}
                   value={question.answer}
                   onChange={(e) =>
-                    handleInputChange(index, e.target.value, false)
+                    handleInputChange(index, e.target.value, false, null)
                   }
                   placeholder="Your answer"
                 />
@@ -194,7 +194,7 @@ const Form = ({ id }) => {
                   required={question.isRequired}
                   value={question.answer}
                   onChange={(e) =>
-                    handleInputChange(index, e.target.value, false)
+                    handleInputChange(index, e.target.value, false, null)
                   }
                   placeholder="Your answer"
                 />
@@ -208,7 +208,7 @@ const Form = ({ id }) => {
                   required={question.isRequired}
                   value={question.answer}
                   onChange={(e) =>
-                    handleInputChange(index, e.target.value, false)
+                    handleInputChange(index, e.target.value, false, null)
                   }
                 />
               )}
@@ -220,7 +220,7 @@ const Form = ({ id }) => {
                   type="file"
                   required={question.isRequired}
                   onChange={(e) =>
-                    handleInputChange(index, e.target.files, false)
+                    handleInputChange(index, e.target.files, false, null)
                   }
                 />
               )}
@@ -238,7 +238,7 @@ const Form = ({ id }) => {
                         checked={question.answer[0] === option}
                         required={question.isRequired}
                         onChange={(e) =>
-                          handleInputChange(index, e.target.value, false)
+                          handleInputChange(index, e.target.value, false, null)
                         }
                       />
                       <label 
@@ -263,7 +263,7 @@ const Form = ({ id }) => {
                         name={`question_${index}`}
                         value={option}
                         checked={question.answer.includes(option)}
-                        onChange={() =>
+                        onChange={(e) =>
                           handleInputChange(index, null, true, option)
                         }
                       />
