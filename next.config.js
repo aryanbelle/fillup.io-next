@@ -4,6 +4,13 @@ const nextConfig = {
   experimental: {
     serverComponentsExternalPackages: ['mongoose']
   },
+  // Add output configuration
+  output: 'standalone',
+  // Disable special character handling in routes
+  trailingSlash: false,
+  // Disable automatic static optimization
+  reactStrictMode: true,
+  swcMinify: true,
   // Add any other configuration options here
 };
 
